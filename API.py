@@ -3,6 +3,7 @@ Autor: Mario Criado Guerrero
 Clase: Diseño de interfaces
 """
 from flask import Flask, jsonify
+import os
 
 ninjapi = Flask(__name__)
 
@@ -23,4 +24,5 @@ def obtener_personajes():
     return jsonify(lista_datos)
 
 if __name__ == '__main__':
-    ninjapi.run(debug=False)
+    port = int(os.environ.get('PORT', 5000))
+    ninjapi.run(host='0.0.0.0', port=port)
