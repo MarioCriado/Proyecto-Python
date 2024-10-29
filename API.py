@@ -24,5 +24,3 @@ def obtener_personajes():
 
 if __name__ == '__main__':
     ninjapi.run(debug=False)
-
-    
